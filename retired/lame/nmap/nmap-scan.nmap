@@ -1,0 +1,51 @@
+# Nmap 7.91 scan initiated Wed Aug 18 06:50:57 2021 as: nmap -sV -sC -O -oA nmap-scan 10.10.10.3
+Nmap scan report for 10.10.10.3
+Host is up (0.69s latency).
+Not shown: 996 filtered ports
+PORT    STATE SERVICE     VERSION
+21/tcp  open  ftp         vsftpd 2.3.4
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 10.10.17.23
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+22/tcp  open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)
+|_  2048 56:56:24:0f:21:1d:de:a7:2b:ae:61:b1:24:3d:e8:f3 (RSA)
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|specialized|general purpose|terminal|switch|broadband router
+Running (JUST GUESSING): Linux 2.4.X|2.6.X (92%), Crestron 2-Series (90%), Chip PC embedded (89%), SNR embedded (89%), Asus embedded (89%)
+OS CPE: cpe:/o:linux:linux_kernel:2.4.30 cpe:/o:linux:linux_kernel:2.6.22 cpe:/o:crestron:2_series cpe:/o:linux:linux_kernel:2.4.18 cpe:/o:linux:linux_kernel cpe:/h:snr:snr-s2960 cpe:/h:asus:rt-ac66u cpe:/o:linux:linux_kernel:2.6
+Aggressive OS guesses: OpenWrt White Russian 0.9 (Linux 2.4.30) (92%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (90%), Crestron XPanel control system (90%), Linux 2.4.18 (90%), Chip PC XtremePC thin client (89%), SNR SNR-S2960 switch (89%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (89%), Asus RT-AC66U router (Linux 2.6) (89%), Asus RT-N10 router or AXIS 211A Network Camera (Linux 2.6) (89%), Asus RT-N16 WAP (Linux 2.6) (89%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 2h01m47s, deviation: 2h49m47s, median: 1m43s
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   Computer name: lame
+|   NetBIOS computer name: 
+|   Domain name: hackthebox.gr
+|   FQDN: lame.hackthebox.gr
+|_  System time: 2021-08-17T21:23:43-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 18 06:52:36 2021 -- 1 IP address (1 host up) scanned in 99.81 seconds

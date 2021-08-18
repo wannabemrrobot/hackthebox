@@ -1,0 +1,4 @@
+# Nmap 7.91 scan initiated Thu Aug 12 01:23:13 2021 as: nmap --script vuln -p445 -oA nmap-vulnscan 10.10.10.40
+Host: 10.10.10.40 ()	Status: Up
+Host: 10.10.10.40 ()	Ports: 445/open/tcp//microsoft-ds///
+# Nmap done at Thu Aug 12 01:23:43 2021 -- 1 IP address (1 host up) scanned in 30.09 seconds
